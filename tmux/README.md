@@ -18,3 +18,10 @@
 - `prefix -> カーソル` -> paneの移動
 - `prefix -> ctrl + f` -> pet起動，fzfで選択後に貼り付け
 - `prefix -> ctrl + カーソル` -> paneのサイズ調整
+
+## 現状で入っていたプラグインなど
+```
+❯ ls
+extrakto/         tmux-easy-motion/ tmux-fzf/         tmux-sensible/    tpm/
+nord-tmux/        tmux-fuzzback/    tmux-pet/         tmux-thumbs/
+```
