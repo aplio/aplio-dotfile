@@ -1,0 +1,131 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    {
+        "key" : "ctrl+[",
+        "command":"EditorContextMenus.Navigate.GoToContainingBlock"
+    },
+    {
+        "key": "ctrl+i",
+        "command": "editor.action.codeAction",
+        "args": {
+          "kind": "refactor"
+        }
+    },
+    {
+        "key": "ctrl+[Quote]",
+        "command": "workbench.action.terminal.focus"
+    },
+    {
+        "key": "ctrl+[Quote]",
+        "command": "workbench.action.terminal.focusNextPane",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+[Semicolon]",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when" : "terminalFocus"
+    },
+    {
+        "key": "ctrl+s",
+        "command": "editor.action.peekDefinition",
+        "when": "editorHasDefinitionProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+    },
+    {
+        "key": "alt+f12",
+        "command": "-editor.action.peekDefinition",
+        "when": "editorHasDefinitionProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "editor.action.openLink"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "-deleteAllRight",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "editor.action.revealDefinition",
+        "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+    },
+    {
+        "key": "f12",
+        "command": "-editor.action.revealDefinition",
+        "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+    },
+    {
+        "key": "cmd+shift+R",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": {
+          "text": "gh prc\u000D"
+        }
+    },
+    {
+        "key": "ctrl+x t",
+        "command": "workbench.action.terminal.focusNext",
+        "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+    },
+    {
+        "key": "shift+cmd+]",
+        "command": "-workbench.action.terminal.focusNext",
+        "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+    },
+    {
+        "key": "ctrl+x f",
+        "command": "workbench.explorer.fileView.focus"
+    },
+    {
+        "key": "ctrl+up",
+        "command": "cursorUp",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+down",
+        "command": "cursorDown",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+right",
+        "command": "cursorWordRight"
+    },
+    {
+        "key": "ctrl+left",
+        "command": "cursorWordLeft",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "alt+left",
+        "command": "-cursorWordLeft",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "cmd+k shift+cmd+s",
+        "command": "git.stageSelectedRanges"
+    },
+    {
+        "key": "cmd+k alt+cmd+s",
+        "command": "-git.stageSelectedRanges",
+        "when": "isInDiffEditor"
+    },
+    {
+        "key": "cmd+k shift+cmd+c",
+        "command": "git.commitStaged"
+    },
+    {
+        "key": "cmd+q",
+        "command": "-workbench.action.quit"
+    },
+    {
+        "key": "cmd+q",
+        "command": "workbench.action.closeEditorsToTheRight"
+    },
+    {
+        "key": "cmd+k shift+-",
+        "command": "workbench.action.decreaseViewWidth"
+    },
+    {
+        "key": "cmd+k shift+=",
+        "command": "workbench.action.increaseViewWidth"
+    }
+]
