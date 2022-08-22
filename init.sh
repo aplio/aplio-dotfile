@@ -49,3 +49,6 @@ brew install tmux
 
 echo "install ghq"
 brew install ghq
+
+echo 'install rg'
+brew install ripgrep
