@@ -36,6 +36,7 @@ font:
   size: 13
   family: mono
 
+# disable mac workspace switch to enable this feature
 key_bindings:
-  - { key: Left,     mods: Control, chars: "\x1bb" }
-  - { key: Right,    mods: Command, chars: "\x1bf" }
+  - { key: Left,     mods: Control, chars: "\x1BB" }
+  - { key: Right,    mods: Command, chars: "\x1BF" }
