@@ -19,6 +19,13 @@ echo "create link for tmux"
 backup ~/.tmux.conf
 ln -sf ${curPath}/tmux/.tmux.conf ~/.tmux.conf
 
+# starship
+# https://starship.rs/ja-jp/guide/
+echo "install starship"
+sudo mkdir -p /usr/local/bin
+curl -sS https://starship.rs/install.sh | sh
+
+
 echo "tpm setup"
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
