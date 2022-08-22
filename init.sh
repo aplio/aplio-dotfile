@@ -10,6 +10,9 @@ function backup() {
     fi
 }
 
+echo "install brew"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
 echo "create link for hammerspoon, only works for macOS"
 mkdir -p ~/.hammerspoon
 backup ~/.hammerspoon/init.lua
@@ -37,4 +40,7 @@ echo "create link for alacritty"
 mkdir -p ~/.config/alacritty
 backup ~/.config/alacritty/alacritty.yml
 ln -sf ${curPath}/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
+
+echo "reset path for now"
+source ~/.zshrc
 
