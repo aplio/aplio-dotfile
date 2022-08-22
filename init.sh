@@ -44,7 +44,7 @@ ln -sf ${curPath}/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 echo "reset path for now"
 source ~/.zshrc
 
-echo "install tmux"
+echo "install tmux, reload by ctrl-j + I"
 brew install tmux
 
 echo "install ghq"
