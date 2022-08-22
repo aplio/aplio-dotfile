@@ -30,6 +30,7 @@ alias ggh='hub browse $(ghq list | peco | cut -d "/" -f 2,3)'
 alias p='peco'
 alias poetryshell='poetry shell'
 alias hp='hub pull-request -o'
+alias gp='git push origin @'
 alias glo='git log --oneline'
 alias gis='git status'
 alias issuelist='gh pr list | fzf --preview "gh pr view {1} | bat --color=always --style=grid --file-name a.md" | awk '{print $1}' | xargs gh pr view --web'
@@ -70,6 +71,9 @@ eval "$(starship init zsh)"
 
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
+
+export JAVA_HOME=`/usr/libexec/java_home -v "1.8"`
+PATH=${JAVA_HOME}/bin:${PATH}
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
