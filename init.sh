@@ -46,3 +46,6 @@ source ~/.zshrc
 
 echo "install tmux"
 brew install tmux
+
+echo "install ghq"
+brew install ghq
