@@ -23,6 +23,7 @@ fpath=(/path/to/homebrew/share/zsh-completions $fpath)
 # editor
 alias emacs='emacs -nw'
 alias vi="nvim"
+alias wp='cd `ghq root`'
 
 ## git
 alias g='cd `ghq root`/`ghq list | fzf --preview "tree {1}"` '
@@ -64,7 +65,7 @@ setopt share_history
 alias frg='frg'
 export PATH="$HOME/.poetry/bin:$PATH"
 export PATH="$HOME/.fzf/bin/:$PATH"
-
+alias code='/usr/local/bin/code'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 eval "$(starship init zsh)"
@@ -72,8 +73,14 @@ eval "$(starship init zsh)"
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 
-export JAVA_HOME=`/usr/libexec/java_home -v "1.8"`
+export JAVA_HOME=`/usr/libexec/java_home -v 18.0.2`
+#export JAVA_HOME=`/usr/libexec/java_home -v "1.8"`
+PATH=${JAVA_HOME}/bin:${PATH}
+PATH=/Users/n-171/Library/Python/3.8/bin:${PATH}
+
+export JAVA_HOME=`/usr/libexec/java_home -v 11`
 PATH=${JAVA_HOME}/bin:${PATH}
 
+source "$HOME/.cargo/env"
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
